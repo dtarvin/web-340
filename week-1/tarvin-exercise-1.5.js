@@ -9,7 +9,7 @@
 
 // display header at beginning of program
 const header = require('../Tarvin-header.js');
-console.log(header.display("David", "Tarvin", "Exercise 1.3"));
+console.log(header.display("David", "Tarvin", "Exercise 1.5"));
 console.log("");
 
 var http = require("http");
