@@ -1,6 +1,7 @@
 {
     "name": "hello-world",
-    "author": "David Tarvin",
+    "author": "Professor Krasso",
+    "modified by": "David Tarvin",
     "private": true,
     "dependencies": {
         "express": "^4.16.4"
