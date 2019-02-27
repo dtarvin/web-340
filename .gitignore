@@ -4,5 +4,5 @@
 *.iml
 
 # node
-node_module
+node_modules
 .node_repl_history

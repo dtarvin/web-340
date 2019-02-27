@@ -1,0 +1,8 @@
+{
+    "name": "hello-world",
+    "author": "David Tarvin",
+    "private": true,
+    "dependencies": {
+        "express": "^4.16.4"
+    }
+}
