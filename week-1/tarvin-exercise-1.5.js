@@ -15,14 +15,14 @@ console.log("");
 var http = require("http");
 
 function processRequest(req, res) {
-    var body = "I solemnly swear that I am up to no good.";
-    var contentLength = body.length;
-    res.writeHead(200, {
-        'Content-Length': contentLength,
-        'Content-Type': 'text/plain'
-    });
+  var body = "I solemnly swear that I am up to no good.";
+  var contentLength = body.length;
+  res.writeHead(200, {
+    'Content-Length': contentLength,
+    'Content-Type': 'text/plain'
+  });
     
-    res.end(body);
+  res.end(body);
 }
 
 var s = http.createServer(processRequest);
