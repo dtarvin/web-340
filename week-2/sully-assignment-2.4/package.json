@@ -1,9 +1,0 @@
-{
-  "name": "ejs-Views",
-  "author": "Jason Sullenger",
-  "private": true,
-  "dependencies": {
-    "ejs": "^2.6.1",
-    "express": "^4.16.4"
-  }
-}
