@@ -22,14 +22,16 @@
     </ul>
   </nav>
   <div class="container"role="main">
-    <br/><br/>
-    <h2>EJS Views Example</h2>
     <div class="row">
       <div class="col-sm-12">
-        <div class="alert alert-success" role="alert">
-          <strong>WELCOME!!!</strong>
+        <div class="jumbotron text-center">
+          <h2>WELCOME TO MY EJS VIEWS PAGE!!!</h2>
           <br/>
-          <strong>Message: </strong>  <span><%= firstName %></span>
+          <p>My name is <span><%= firstName + " " + lastName %></span></p>
+          <p>You may reach me at: </p>
+          <p><span><%= address %></span><br>
+            <span><%= city + ", " + state + " " + zip %></span>
+          </p>
         </div>
       </div>
     </div>
