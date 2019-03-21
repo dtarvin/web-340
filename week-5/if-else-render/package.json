@@ -1,10 +1,10 @@
 {
-    "name": "if-else-render",
-    "author": "Professor Krasso",
-    "modified by": "David Tarvin",
-    "private": true,
-    "dependencies": {
-        "ejs": "^2.6.1",
-        "express": "^4.16.4"
-    }
+  "name": "if-else-render",
+  "author": "Professor Krasso",
+  "modified by": "David Tarvin",
+  "private": true,
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
 }
