@@ -1,0 +1,12 @@
+<div role="main" class="container">
+  <br><br>
+  <h2>Names List</h2>
+  <!-- check if names array is populated -->
+  <% if (names.length > 0) { %>
+    <!-- if populated, run through each name in the array -->
+    <% for (var i=0; i < names.length; i++) { %>
+      <!-- and output it -->
+      <div class="alert alert-success" role="alert"><strong><%=names[i] %></strong></div>
+    <% } %>
+  <% } %>
+</div>
