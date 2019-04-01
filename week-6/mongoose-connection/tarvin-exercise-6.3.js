@@ -1,5 +1,3 @@
-var header = require("../../tarvin-header")
-
 var mongoose = require("mongoose");
 
 var mongoDB = "mongodb+srv://bellevue_student:david1234@cluster0-xzug0.mongodb.net/test?retryWrites=true";
