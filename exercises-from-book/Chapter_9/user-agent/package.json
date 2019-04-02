@@ -1,0 +1,17 @@
+{
+  "name": "whats-my-user-agent",
+  "private": true,
+  "scripts": {
+    "start": "node app",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "mocha": "^6.0.2",
+    "supertest": "^4.0.2"
+  }
+}
