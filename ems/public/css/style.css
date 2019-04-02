@@ -1,0 +1,17 @@
+footer {
+  text-align: center;
+  margin: auto;
+  width: 30%;
+}
+
+.welcome {
+  text-align: center;
+}
+
+h2 {
+  color: red;
+}
+
+body {
+  color: blue;
+}
