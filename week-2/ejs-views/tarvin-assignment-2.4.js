@@ -1,3 +1,17 @@
+/*
+============================================
+; Title:  tarvin-assignment-2.4.js
+; Author: David Tarvin
+; Date:   03 March 2019
+; Description: ejs-views
+;===========================================
+*/
+
+// display header at beginning of program
+const header = require('../Tarvin-header.js');
+console.log(header.display("David", "Tarvin", "Assignment 2.4"));
+console.log("");
+
 var http = require("http");
 var express = require("express");
 var path = require("path");
