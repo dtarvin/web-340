@@ -1,7 +1,8 @@
 /*
 ============================================
 ; Title:  tarvin-exercise-4.2.js
-; Author: David Tarvin
+; Author: Richard Krasso
+; Modified by: David Tarvin
 ; Date:   17 March 2019
 ; Description: json-api
 ;===========================================
