@@ -1,7 +1,8 @@
 /*
 ============================================
 ; Title:  tarvin-exercise-5.3.js
-; Author: David Tarvin
+; Author: Richard Krasso
+; Modified by: David Tarvin
 ; Date:   21 March 2019
 ; Description: Pug Template
 ;===========================================
