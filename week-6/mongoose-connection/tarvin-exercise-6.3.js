@@ -9,7 +9,7 @@
 
 // display header at beginning of program
 const header = require('../../Tarvin-header.js');
-console.log(header.display("David", "Tarvin", "Assignment 6.4"));
+console.log(header.display("David", "Tarvin", "Exercise 6.3"));
 console.log("");
 
 var mongoose = require("mongoose");
