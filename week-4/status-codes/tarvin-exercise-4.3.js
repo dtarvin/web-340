@@ -1,3 +1,17 @@
+/*
+============================================
+; Title:  tarvin-exercise-4.3.js
+; Author: David Tarvin
+; Date:   17 March 2019
+; Description: Status Codes
+;===========================================
+*/
+
+// display header at beginning of program
+const header = require('../../Tarvin-header.js');
+console.log(header.display("David", "Tarvin", "Exercise 4.3"));
+console.log("");
+
 var express = require("express");
 var http = require("http");
 
