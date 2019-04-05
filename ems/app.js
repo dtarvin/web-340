@@ -16,6 +16,20 @@ var express = require("express");
 var http = require("http");
 var path = require("path");
 var logger = require("morgan");
+var mongoose = require("mongoose");
+var Employee = require('./models/employee');
+
+var mongoDB = "mongodb+srv://bellevue_student:david1234@cluster0-xzug0.mongodb.net/test?retryWrites=true";
+mongoose.connect(mongoDB, {
+  useNewUrlParser: true
+});
+
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on("error", console.error.bind(console, "MongoDB connection error: "));
+db.once("open", function() {
+  console.log("Application connected to MongoDB Atlas instance");
+});
 
 var app = express();
 
@@ -26,6 +40,11 @@ app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
 
 app.use(logger("short"));
+
+var employee = new Employee({
+  firstName: "David",
+  lastName: "Tarvin"
+})
 
 app.get("/", function(request, response) {
   response.render("index", {
