@@ -1,7 +1,8 @@
 /*
 ============================================
 ; Title:  tarvin-exercise-3.2.js
-; Author: David Tarvin
+; Author: Richard Krasso
+; Modified by: David Tarvin
 ; Date:   10 March 2019
 ; Description: morgan-logging
 ;===========================================
