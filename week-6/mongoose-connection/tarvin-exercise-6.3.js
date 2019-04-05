@@ -1,3 +1,17 @@
+/*
+============================================
+; Title:  tarvin-exercise-6.3.js
+; Author: David Tarvin
+; Date:   31 March 2019
+; Description: Mongoose connection
+;===========================================
+*/
+
+// display header at beginning of program
+const header = require('../../Tarvin-header.js');
+console.log(header.display("David", "Tarvin", "Assignment 6.4"));
+console.log("");
+
 var mongoose = require("mongoose");
 
 var mongoDB = "mongodb+srv://bellevue_student:david1234@cluster0-xzug0.mongodb.net/test?retryWrites=true";
