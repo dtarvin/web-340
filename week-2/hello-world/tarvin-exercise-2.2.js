@@ -1,7 +1,8 @@
 /*
 ============================================
 ; Title:  tarvin-exercise-2.2.js
-; Author: David Tarvin
+; Author: Richard Krasso
+; Modified by: David Tarvin
 ; Date:   28 February 2019
 ; Description: Hello World
 ;===========================================
