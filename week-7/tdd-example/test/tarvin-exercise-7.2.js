@@ -9,7 +9,8 @@
 
 // display header at beginning of program
 const header = require('../../../Tarvin-header.js');
-console.log(header.display("David", "Tarvin", "Assignment 6.4"));
+console.log(header.display("David", "Tarvin", "Exercise 7.2"));
+
 console.log("");var assert = require("assert");
 
 describe("String#split", function() {
@@ -17,9 +18,3 @@ describe("String#split", function() {
     assert(Array.isArray('Apple,Orange,Mango'.split(',')));
   });
 });
-
-// function getFruits(str) {
-//   return str.split(',');
-// }
-
-// module.exports = getFruits;
