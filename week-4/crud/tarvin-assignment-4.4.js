@@ -1,7 +1,7 @@
 /*
 ============================================
 ; Title:  tarvin-assignment-4.4.js
-; Author: Professor Krasso
+; Author: Richard Krasso
 ; Modified by: David Tarvin
 ; Date:    17 March 2019
 ; Description: Demonstrates CRUD operations in a
