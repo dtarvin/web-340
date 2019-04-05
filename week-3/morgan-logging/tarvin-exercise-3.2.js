@@ -1,3 +1,17 @@
+/*
+============================================
+; Title:  tarvin-exercise-3.2.js
+; Author: David Tarvin
+; Date:   10 March 2019
+; Description: morgan-logging
+;===========================================
+*/
+
+// display header at beginning of program
+const header = require('../../Tarvin-header.js');
+console.log(header.display("David", "Tarvin", "Exercise 3.2"));
+console.log("");
+
 var express = require("express");
 var http = require("http");
 var path = require("path");
