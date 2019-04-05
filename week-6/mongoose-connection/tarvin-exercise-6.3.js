@@ -1,7 +1,8 @@
 /*
 ============================================
 ; Title:  tarvin-exercise-6.3.js
-; Author: David Tarvin
+; Author: Richard Krasso
+; Modified by: David Tarvin
 ; Date:   31 March 2019
 ; Description: Mongoose connection
 ;===========================================
