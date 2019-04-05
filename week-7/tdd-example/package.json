@@ -1,0 +1,13 @@
+{
+  "name": "tdd-in-action",
+  "author": "Professor Krasso",
+  "modified by": "David Tarvin",
+  "private": true,
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
