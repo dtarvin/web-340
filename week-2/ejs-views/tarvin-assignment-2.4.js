@@ -1,7 +1,8 @@
 /*
 ============================================
 ; Title:  tarvin-assignment-2.4.js
-; Author: David Tarvin
+; Author: Richard Krasso
+; Modified by: David Tarvin
 ; Date:   03 March 2019
 ; Description: ejs-views
 ;===========================================
