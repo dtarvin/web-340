@@ -1,3 +1,17 @@
+/*
+============================================
+; Title:  tarvin-exercise-2.3.js
+; Author: David Tarvin
+; Date:   27 February 2019
+; Description: Routes
+;===========================================
+*/
+
+// display header at beginning of program
+const header = require('../../Tarvin-header.js');
+console.log(header.display("David", "Tarvin", "Exercise 2.3"));
+console.log("");
+
 var express = require("express");
 var http = require("http");
 
