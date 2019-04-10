@@ -1,6 +1,6 @@
 /*
 ============================================
-; Title:  app.js (Assignment 6.4)
+; Title:  app.js (EMS)
 ; Author: David Tarvin
 ; Date:   02 April 2019
 ; Description: Employee Management System
@@ -9,13 +9,14 @@
 
 // display header at beginning of program
 const header = require('../Tarvin-header.js');
-console.log(header.display("David", "Tarvin", "Assignment 6.4 - EMS"));
+console.log(header.display("David", "Tarvin", "EMS"));
 console.log("");
 
 var express = require("express");
 var http = require("http");
 var path = require("path");
 var logger = require("morgan");
+var helmet = require("helmet");
 var mongoose = require("mongoose");
 var Employee = require('./models/employee');
 
@@ -40,6 +41,8 @@ app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
 
 app.use(logger("short"));
+
+app.use(helmet.xssFilter());
 
 var employee = new Employee({
   firstName: "David",
