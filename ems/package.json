@@ -1,5 +1,5 @@
 {
-  "name": "if-else-render",
+  "name": "ems",
   "author": "Professor Krasso",
   "modified by": "David Tarvin",
   "private": true,
@@ -12,5 +12,8 @@
     "helmet": "^3.16.0",
     "mongoose": "^5.4.22",
     "morgan": "^1.9.1"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }

@@ -12,45 +12,49 @@ const header = require('../Tarvin-header.js');
 console.log(header.display("David", "Tarvin", "EMS"));
 console.log("");
 
-var express = require("express");
-var http = require("http");
-var path = require("path");
-var logger = require("morgan");
-var helmet = require("helmet");
-var mongoose = require("mongoose");
-var bodyParser = require("body-parser");
-var cookieParser = require("cookie-parser");
-var csrf = require("csurf");
-var Employee = require('./models/employee');
+const express = require("express");
+const http = require("http");
+const path = require("path");
+const logger = require("morgan");
+const helmet = require("helmet");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
+const csrf = require("csurf");
+const Employee = require('./models/employee');
 
-var mongoDB = "mongodb+srv://bellevue_student:david1234@cluster0-xzug0.mongodb.net/test?retryWrites=true";
+const mongoDB = "mongodb+srv://bellevue_student:david1234@cluster0-xzug0.mongodb.net/test?retryWrites=true";
 mongoose.connect(mongoDB, {
   useNewUrlParser: true
 });
 
 mongoose.Promise = global.Promise;
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error: "));
 db.once("open", function() {
   console.log("Application connected to MongoDB Atlas instance");
 });
 
 // setup csrf protection
-var csrfProtection = csrf({cookie: true});
+let csrfProtection = csrf({cookie: true});
 
 // initialize the express application
-var app = express();
+let app = express();
 
 // set statements
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
+
+/************************************** */
+app.set("port", process.env.PORT || 8080);
+/************************************** */
 
 // use statements
 app.use(express.static(__dirname + '/public'));
 app.use(logger("short"));
 app.use(helmet.xssFilter());
 app.use(bodyParser.urlencoded({
-  extended: true;
+  extended: true
 }));
 app.use(cookieParser());
 app.use(csrfProtection);
@@ -61,11 +65,6 @@ app.use(function(request, response, next) {
   next();
 });
 
-var employee = new Employee({
-  firstName: "David",
-  lastName: "Tarvin"
-})
-
 // routing
 app.get("/", function(request, response) {
   response.render("index", {
@@ -73,9 +72,50 @@ app.get("/", function(request, response) {
   });
 });
 
-app.post("/process", function(request, response) {
-  console.log(request.body.txtName);
-  response.redirect("/");
+/***************************************** */
+app.get("/new", function(request, response) {
+  response.render("new", {
+    title: 'EMS | New'
+  });
+});
+/***************************************** */
+
+// My post function****************************
+// app.post("/process", function(request, response) {
+//   console.log(request.body.txtName);
+//   response.redirect("/");
+// });
+
+// post process in fms
+app.post('/process', function(request, response) {
+  // console.log(request.body.txtName);
+  if (!request.body.txtFirstName || !request.body.txtLastName) {
+    response.status(400).send("Entries must have a first and last name");
+    return;
+  }
+
+  // get request's form data
+  const employeeFirstName = request.body.txtFirstName;
+  console.log(employeeFirstName);
+  const employeeLastName = request.body.txtLastName;
+  console.log(employeeLastName);
+
+  // create employee model
+  let employee = new Employee({
+    firstName: employeeFirstName,
+    lastName: employeeLastName
+  });
+
+  // save
+  employee.save(function(err) {
+    if (err) {
+      console.log(err);
+      throw err;
+    } else {
+      console.log(employeeFirstName + ' ' + employeeLastName + ' saved successfully!');
+      response.redirect("/");
+    }
+  });
 });
 
 http.createServer(app).listen(8080, function() {
