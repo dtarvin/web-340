@@ -7,6 +7,7 @@
 ;===========================================
 */
 
+
 // display header at beginning of program
 const header = require('../Tarvin-header.js');
 console.log(header.display("David", "Tarvin", "Assignment 6.4 - EMS"));
