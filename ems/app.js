@@ -17,6 +17,7 @@ var express = require("express");
 var http = require("http");
 var path = require("path");
 var logger = require("morgan");
+var helmet = require("helmet");
 var mongoose = require("mongoose");
 var Employee = require('./models/employee');
 
@@ -42,6 +43,8 @@ app.set("view engine", "ejs");
 
 app.use(logger("short"));
 
+app.use(helmet.xssFilter());
+
 var employee = new Employee({
   firstName: "David",
   lastName: "Tarvin"
@@ -49,7 +52,8 @@ var employee = new Employee({
 
 app.get("/", function(request, response) {
   response.render("index", {
-    title: "Home page"
+    title: "Home page",
+    message: "XSS Prevention Example"
   });
 });
 
