@@ -71,9 +71,24 @@ var employee = new Employee({
 })
 
 app.get("/", function(request, response) {
-  response.render("index", {
-    title: "Home page",
-    message: "New Employee Entry Page"
+  Employee.find({}, function(error, employees) {
+    if (error) {
+      console.log(error);
+      throw error;
+    } else {
+      console.log(employees);
+      response.render("index", {
+        title: "Home page",
+        message: "New Employee Entry Page",
+        employees: employees
+      })
+    }
+  });
+});
+
+app.get("/new", function(request, response) {
+  response.render("new", {
+    title: "New Employee Page"
   });
 });
 
@@ -82,7 +97,7 @@ app.get("/list", function(request, response) {
     if (error) throw error;
 
     response.render("list", {
-      title: "Employee List",
+      title: "Employee List Page",
       employees: employees
     });
   });
