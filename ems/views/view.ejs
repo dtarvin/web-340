@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include header %>
+
+<body>
+  <% include navbar %>
+
+  <div class="container" role="main" style="width: 50%;">
+    <br><br>
+    <h2>-- Employee Record --</h2>
+    <div>
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" class="form-control" id="firstName" value="<%= employee[0].firstName %>" name="firstName">
+        <label for="lastName">Last Name:</label>
+        <input type="text" class="form-control" id="lastName" value="<%= employee[0].lastName %>" name="lastName">
+      </div>
+    </div>
+    <br><br>
+    <a href="/list">Return to Employees</a>
+  </div>
+  <% include scripts %>
+</body>
+</html>
