@@ -65,6 +65,8 @@ app.set("views", path.resolve(__dirname, "views"));
 
 app.set("view engine", "ejs");
 
+app.set("port", process.env.PORT || 8080);
+
 var employee = new Employee({
   firstName: "David",
   lastName: "Tarvin"
@@ -106,7 +108,7 @@ app.get("/list", function(request, response) {
 app.get("/view/:queryName", function(request, response) {
   var queryName = request.params.queryName;
 
-  Employee.find({'name': queryName}, function(error, employees) {
+  Employee.find({'firstName': queryName}, function(error, employees) {
     if (error) throw error;
     console.log(employees);
     if(employees.length > 0) {
@@ -138,6 +140,6 @@ app.post("/process", function(request, response) {
   response.redirect("/");
 });
 
-http.createServer(app).listen(8080, function() {
-  console.log("Application started on port 8080!");
+http.createServer(app).listen(app.get("port"), function() {
+  console.log("Application started on port " + app.get("port"));
 });
