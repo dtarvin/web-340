@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include header %>
+
+<body>
+  <% include navbar %>
+  <% if (employees.length) { %>
+    <div class="row">
+      <div class="col-sm-12">
+        <br><br>
+          <h2>Employee Listing</h2><br>
+        <div class="card card-inverse" style="background-color: #333; border-color: #333; color: white;">
+          <div class="card-block p-3">
+
+
+            <table class="table table-dark table-striped table-hover">
+              <thead class="thead-dark">
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Functions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% employees.forEach(function(employee) { %>
+                <tr>
+                  <td><%= employee.firstName %></td>
+                  <td><%= employee.lastName %></td>
+                  <td><a href="/view/<%= employee.firstName %>">VIEW</a></td>
+                </tr>
+              <% }) %>
+              </tbody>
+            </table>
+            <a href="/new">Add New</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } else { %>
+      No entries! <a href="/new">Add one!</a>
+  <% } %>
+
+
+
+
+
+
+
+
+
+

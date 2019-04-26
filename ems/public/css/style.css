@@ -10,8 +10,14 @@ footer {
 
 h2 {
   color: red;
+  text-align: center;
 }
 
 body {
   color: blue;
+}
+
+.card {
+  width: 60%;
+  margin: auto;
 }

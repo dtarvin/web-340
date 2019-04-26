@@ -1,7 +1,6 @@
 {
-  "name": "ems",
-  "author": "Professor Krasso",
-  "modified by": "David Tarvin",
+  "name": "TransformersTechSpecs",
+  "author": "David Tarvin",
   "private": true,
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -13,6 +12,7 @@
     "mongoose": "^5.4.22",
     "morgan": "^1.9.1"
   },
-  "scripts": {"start":"node app.js"},
-  "engines": {"node":"8.11.3"}
+  "scripts": {
+    "start": "node app.js"
+  }
 }
