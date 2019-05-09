@@ -1,6 +1,6 @@
 /*
 ============================================
-; Title:  app.js (Assignment 6.4)
+; Title:  app.js (EMS)
 ; Author: David Tarvin
 ; Date:   02 April 2019
 ; Description: Employee Management System
@@ -46,7 +46,9 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.use(logger("short"));
+/************************************** */
+app.set("port", process.env.PORT || 8080);
+/************************************** */
 
 app.use(helmet.xssFilter());
 
@@ -72,6 +74,7 @@ var employee = new Employee({
   lastName: "Tarvin"
 })
 
+// routing
 app.get("/", function(request, response) {
   Employee.find({}, function(error, employees) {
     if (error) {
