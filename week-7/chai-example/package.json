@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.0.2"
+    "mocha": "^8.4.0"
   },
   "scripts": {
     "test": "mocha"
